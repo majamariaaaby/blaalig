@@ -1,0 +1,41 @@
+---
+import Menu from "./Menu.astro";
+import Timer from "./Timer.astro";
+---
+
+<header>
+  <div class="column1">
+    <img class="logo" src="../public/assets/logo.webp" alt="logo" />
+  </div>
+  <div class="column2">
+    <Timer />
+  </div>
+  <div class="column3">
+    <Menu />
+  </div>
+</header>
+
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #070707;
+    padding: 2rem;
+  }
+  .column1 {
+    max-width: 100%;
+    text-align: left;
+  }
+  img {
+    max-width: 150px;
+  }
+  .column2 {
+    max-width: 100%;
+    text-align: center;
+  }
+  .column3 {
+    max-width: 100%;
+    align-items: right;
+  }
+</style>
