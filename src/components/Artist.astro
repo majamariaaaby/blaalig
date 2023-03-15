@@ -1,0 +1,63 @@
+---
+---
+
+<div class="card">
+  <div class="card-content">
+    <a href="#" class="card-btn">Info</a>
+    <div class="card-footer">
+      <h1 class="artistname">Artist Name</h1>
+    </div>
+  </div>
+</div>
+
+<style>
+  .card {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 3px solid black;
+    border-radius: 35px 0 25px 5px;
+    overflow: hidden;
+    width: 450px;
+    height: 250px;
+    margin: 0.5rem;
+  }
+
+  .card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url("../public/assets/artist_test.png");
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .card-btn {
+    margin-left: 20px;
+    margin-bottom: 5px;
+    border-radius: 25px 0 25px 5px;
+    align-self: flex-start;
+    background-color: #eb342a;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 6px 30px;
+    text-decoration: none;
+    margin-top: auto;
+  }
+
+  .card-footer {
+    background-color: black;
+    border-radius: 25px 0 0px 0px;
+    padding: 5px 5px;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .artistname {
+    margin: 10px 0 0 20px;
+    font-size: 34px;
+    color: white;
+  }
+</style>

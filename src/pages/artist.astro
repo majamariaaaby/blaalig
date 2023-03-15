@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Artist from "../components/Artist.astro";
+---
+
+<Layout title="Kune">
+  <h1>FREDAG</h1>
+  <article>
+    <Artist />
+    <Artist />
+    <Artist />
+    <Artist />
+    <Artist />
+    <Artist />
+  </article>
+</Layout>
+<style>
+  article {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  @media screen and (max-width: 650px) {
+    article {
+      width: 100%;
+      display: block;
+    }
+  }
+</style>
