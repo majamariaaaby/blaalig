@@ -4,8 +4,33 @@ import Artist from "../components/Artist.astro";
 ---
 
 <Layout title="Kune">
-  <h1>FREDAG</h1>
   <article>
+    <h1 class="first_h1">FREDAG</h1>
+    <h2 class="first_h2">Line up</h2>
+    <Artist />
+    <Artist />
+    <Artist />
+    <Artist />
+    <Artist />
+    <Artist />
+    <Artist />
+    <Artist />
+    <Artist />
+  </article>
+  <article>
+    <h1 class="first_h1">LØRDAG</h1>
+    <Artist />
+    <Artist />
+    <Artist />
+    <Artist />
+    <Artist />
+    <Artist />
+    <Artist />
+    <Artist />
+    <Artist />
+  </article>
+  <article>
+    <h1 class="first_h1">SØNDAG</h1>
     <Artist />
     <Artist />
     <Artist />
@@ -25,11 +50,94 @@ import Artist from "../components/Artist.astro";
     padding-top: 5rem;
     padding-left: 5rem;
     padding-right: 5rem;
+    position: relative;
+    top: -150px;
+    margin-bottom: 4rem;
   }
-  @media screen and (max-width: 650px) {
+  .first_h1 {
+    position: absolute;
+    left: 63px;
+    top: -16%;
+    font-size: 120px;
+    line-height: 142px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  .first_h2 {
+    position: absolute;
+    right: 15%;
+    top: -5%;
+    font-size: 45px;
+    line-height: 142px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* @media screen and (max-width: 650px) {
     article {
       width: 100%;
       display: block;
+    }
+  } */
+
+  @media screen and (max-width: 1024px) {
+    .first_h1 {
+      font-size: 80px;
+      line-height: 100px;
+      left: 30px;
+      top: -10%;
+    }
+
+    .first_h2 {
+      font-size: 30px;
+      line-height: 50px;
+      right: 5%;
+      top: -5%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    article {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 2rem;
+    }
+
+    .first_h1 {
+      font-size: 60px;
+      line-height: 80px;
+      left: 10px;
+      top: -8%;
+    }
+
+    .first_h2 {
+      font-size: 25px;
+      line-height: 50px;
+      right: 5%;
+      top: -5%;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    article {
+      display: block;
+      padding: 1rem;
+    }
+
+    .first_h1 {
+      font-size: 40px;
+      line-height: 60px;
+      left: 10px;
+      top: -10%;
+    }
+
+    .first_h2 {
+      font-size: 20px;
+      line-height: 30px;
+      right: 5%;
+      top: -5%;
     }
   }
 </style>
