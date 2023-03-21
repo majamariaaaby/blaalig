@@ -77,14 +77,18 @@ const data = await fetch("https://bvyynevxbhbnpyxhpnih.supabase.co/rest/v1/kune"
     text-align: center;
   }
 
-  /* @media screen and (max-width: 650px) {
+@media screen and (max-width: 1300px) {
     article {
-      width: 100%;
-      display: block;
-    }
-  } */
-
-  @media screen and (max-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    position: relative;
+    top: -150px;
+    margin-bottom: 4rem;
+  }
     .first_h1 {
       font-size: 80px;
       line-height: 100px;
@@ -100,46 +104,32 @@ const data = await fetch("https://bvyynevxbhbnpyxhpnih.supabase.co/rest/v1/kune"
     }
   }
 
-  @media screen and (max-width: 768px) {
+    @media screen and (max-width: 800px) {
     article {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      padding: 2rem;
-    }
-
-    .first_h1 {
-      font-size: 60px;
-      line-height: 80px;
-      left: 10px;
-      top: -8%;
-    }
-
-    .first_h2 {
-      font-size: 25px;
-      line-height: 50px;
-      right: 5%;
-      top: -5%;
-    }
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    position: relative;
+    top: -150px;
+    margin-bottom: 4rem;
+    min-width: 700px;
+    justify-self: center;
   }
-
-  @media screen and (max-width: 480px) {
-    article {
-      display: block;
-      padding: 1rem;
-    }
-
     .first_h1 {
-      font-size: 40px;
-      line-height: 60px;
-      left: 10px;
-      top: -10%;
+      font-size: 80px;
+      line-height: 100px;
+      left: 30px;
+      top: -60px;
     }
 
     .first_h2 {
-      font-size: 20px;
-      line-height: 30px;
-      right: 5%;
-      top: -5%;
+      font-size: 30px;
+      line-height: 50px;
+      left: 40%;
+      top: 20px
     }
   }
 </style>
