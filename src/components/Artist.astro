@@ -1,11 +1,12 @@
 ---
+const { data } = Astro.props;
 ---
 
-<div class="card">
+<div class="card" style={`--bg: ${data.img}`}>
   <div class="card-content">
-    <a href="#" class="card-btn">Info</a>
+    <a href="#" class="card-btn">{data.info}</a>
     <div class="card-footer">
-      <h1 class="artistname">Artist Name</h1>
+      <h1 class="artistname">{data.name}</h1>
     </div>
   </div>
 </div>
@@ -29,7 +30,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-image: url("../public/assets/artist_test.png");
+
+    background-image: url(var(--bg));
   }
 
   img {
