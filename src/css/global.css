@@ -1,0 +1,15 @@
+@font-face {
+  font-family: dance;
+  src: url("/font/Dance.ttf");
+}
+
+@font-face {
+  font-family: fugue;
+  src: url("/font/Fugue-Regular.ttf");
+}
+
+p,
+span,
+h1 {
+  font-family: fugue;
+}
