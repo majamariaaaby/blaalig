@@ -2,7 +2,7 @@
 const { data } = Astro.props;
 ---
 
-<div class="card" style={`--bg: ${data.img}`}>
+<div class="card">
   <div class="card-content">
     <a href="#" class="card-btn">{data.info}</a>
     <div class="card-footer">
@@ -11,7 +11,7 @@ const { data } = Astro.props;
   </div>
 </div>
 
-<style>
+<style define:vars={{ img: `url(/artist/${data.img})` }}>
   .card {
     display: grid;
     grid-template-columns: 1fr;
@@ -31,7 +31,7 @@ const { data } = Astro.props;
     flex-direction: column;
     justify-content: space-between;
 
-    background-image: url(var(--bg));
+    background-image: var(--img);
   }
 
   img {
