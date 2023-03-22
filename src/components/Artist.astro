@@ -32,6 +32,7 @@ const { data } = Astro.props;
     justify-content: space-between;
 
     background-image: var(--img);
+    background-size: cover;
   }
 
   img {
@@ -48,6 +49,8 @@ const { data } = Astro.props;
     font-size: 12px;
     padding: 5px 35px;
     text-decoration: none;
+    text-transform: uppercase;
+    font-family: fugue;
     margin-top: auto;
   }
 
@@ -61,7 +64,10 @@ const { data } = Astro.props;
 
   .artistname {
     margin: 10px 0 0 20px;
-    font-size: 34px;
+    font-size: 30px;
     color: white;
+    text-transform: uppercase;
+    font-family: dance;
+    letter-spacing: 0.15em;
   }
 </style>
