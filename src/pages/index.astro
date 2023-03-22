@@ -1,10 +1,125 @@
 ---
 import "../css/global.css";
+import Forsideheader from "../components/Forsideheader.astro";
 import Layout from "../layouts/Layout.astro";
 import About from "../components/About.astro";
 import Textslider from "../components/Textslider.astro";
 ---
 
+<Forsideheader />
+<h1>KUNE</h1>
+<h2>19 - 23 JULY UNGDOMS&Oslash;EN</h2>
+<h3>A 5-day electronic music festival that takes place on an island 30 minutes away from Copenhagen.</h3>
+<a href="#"><span>GET TICKETS</span></a>
 <Layout title="Kune">
   <Textslider />
+  <section class="grid_1-1">
+    <p>dsadasd</p>
+    <div class="forside_img"></div>
+  </section>
 </Layout>
+
+<style>
+  h1 {
+    margin: auto;
+    position: absolute;
+    width: 728px;
+    height: 167px;
+    top: 133px;
+    left: 277px;
+
+    font-family: "fugue";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 230px;
+    line-height: 271px;
+    text-align: center;
+
+    color: #ffffff;
+  }
+
+  h2 {
+    position: absolute;
+    width: 1280px;
+    height: 53px;
+    left: 1px;
+    top: 364px;
+
+    font-family: "fugue";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 53px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #ffffff;
+  }
+
+  h3 {
+    position: absolute;
+    width: 566px;
+    height: 75px;
+    left: 357px;
+    top: 453px;
+
+    font-family: "fugue";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #ffffff;
+  }
+
+  a {
+    position: absolute;
+    width: 320px;
+    height: 79px;
+    left: 480px;
+    top: 581px;
+
+    background: #eb342a;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px 0px;
+    text-decoration: none;
+  }
+  span {
+    position: absolute;
+    width: 219px;
+    height: 46px;
+    left: 15%;
+    top: 22%;
+
+    font-family: "fugue";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    text-align: center;
+
+    color: #ffffff;
+  }
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .forside_img {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 494px;
+    height: 330px;
+    left: 719px;
+    top: 896px;
+
+    background: url("../assets/kune_ungdomsoe.webp");
+    border: 3px solid #000000;
+    border-radius: 30px 0px;
+    background-size: cover;
+  }
+</style>
