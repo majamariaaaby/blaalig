@@ -1,50 +1,50 @@
 ---
-import "../css/global.css";
+import { Debug } from "astro/components";
 import Layout from "../layouts/Layout.astro";
 import Artist from "../components/Artist.astro";
-import Header from "../components/Header.astro";
+const data = await fetch("https://bvyynevxbhbnpyxhpnih.supabase.co/rest/v1/kune", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ2eXluZXZ4YmhibnB5eGhwbmloIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzkwNDE0MTIsImV4cCI6MTk5NDYxNzQxMn0.j8URUy6HGV0vkNj8EKsI61TI4G6x-zzhaQZEwnjv4aQ",
+  },
+}).then((res) => res.json());
 ---
 
 <Header />
 <Layout title="Kune">
   <article>
-    <h1 class="first_h1">FREDAG</h1>
+    <h1 class="first_h1">Friday</h1>
     <h2 class="first_h2">Line up</h2>
-    <Artist />
-    <Artist />
-    <Artist />
-    <Artist />
-    <Artist />
-    <Artist />
-    <Artist />
-    <Artist />
-    <Artist />
+    {
+      data
+        .filter((act) => act.day === "friday")
+        .map((artist) => {
+          return <Artist data={artist} />;
+        })
+    }
   </article>
   <article>
-    <h1 class="first_h1">LØRDAG</h1>
-    <Artist />
-    <Artist />
-    <Artist />
-    <Artist />
-    <Artist />
-    <Artist />
-    <Artist />
-    <Artist />
-    <Artist />
+    <h1 class="first_h1">Saturday</h1>
+    {
+      data
+        .filter((act) => act.day === "saturday")
+        .map((artist) => {
+          return <Artist data={artist} />;
+        })
+    }
   </article>
   <article>
-    <h1 class="first_h1">SØNDAG</h1>
-    <Artist />
-    <Artist />
-    <Artist />
-    <Artist />
-    <Artist />
-    <Artist />
-    <Artist />
-    <Artist />
-    <Artist />
+    <h1 class="first_h1">Sunday</h1>
+    {
+      data
+        .filter((act) => act.day === "sunday")
+        .map((artist) => {
+          return <Artist data={artist} />;
+        })
+    }
   </article>
 </Layout>
+
 <style>
   article {
     display: grid;
