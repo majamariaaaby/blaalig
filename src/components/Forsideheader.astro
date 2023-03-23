@@ -4,19 +4,34 @@ import Timer from "./Timer.astro";
 ---
 
 <header>
-  <div class="column1">
-    <img class="logo" src="../public/assets/logo.webp" alt="logo" />
+  <div class="header">
+    <div class="column1">
+      <img class="logo" src="../public/assets/logo.webp" alt="logo" />
+    </div>
+    <div class="column2">
+      <Timer />
+    </div>
+    <div class="column3">
+      <Menu />
+    </div>
   </div>
-  <div class="column2">
-    <Timer />
-  </div>
-  <div class="column3">
-    <Menu />
-  </div>
+  <section class="flex">
+    <div class="top">
+      <h1>KUNE</h1>
+      <h2>19 - 23 JULY UNGDOMS&Oslash;EN</h2>
+      <h3>A 5-day electronic music festival that takes place on an island 30 minutes away from Copenhagen.</h3>
+      <div class="get_tickets">
+        <a href="#">GET TICKETS</a>
+      </div>
+    </div>
+  </section>
 </header>
 
 <style>
-header {
+  header {
+    display: block;
+  }
+  .header {
     display: flex;
     justify-content: space-between;
     padding: 2rem;
@@ -39,5 +54,98 @@ header {
   .column3 {
     max-width: 100%;
     align-items: right;
+  }
+
+  .flex {
+    width: 100%;
+    position: absolute;
+    top: 10%;
+    left: -10;
+  }
+  .top {
+    display: block;
+    justify-content: center;
+  }
+  h1 {
+    padding-top: 2%;
+    margin: auto;
+    /* position: absolute; */
+    width: 728px;
+    height: 250px;
+
+    font-family: "fugue";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 230px;
+    line-height: 271px;
+    text-align: center;
+
+    color: #ffffff;
+  }
+
+  h2 {
+    /*  position: absolute; */
+    margin: auto;
+    display: block;
+    height: 53px;
+
+    font-family: "fugue";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45px;
+    line-height: 53px;
+    /* identical to box height */
+
+    text-align: center;
+    justify-items: center;
+    color: #ffffff;
+  }
+
+  h3 {
+    margin: auto;
+    /*  position: absolute; */
+    width: 566px;
+    height: 75px;
+    left: 357px;
+    top: 453px;
+
+    font-family: "fugue";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #ffffff;
+  }
+
+  .get_tickets {
+    margin: auto;
+    margin-top: 5%;
+    width: 320px;
+    height: 79px;
+    text-align: center;
+    background: #eb342a;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px 0px;
+  }
+  a {
+    /*  position: absolute; */
+    display: flex;
+    padding: 6%;
+    justify-content: space-around;
+    margin: auto;
+    place-items: center;
+
+    font-family: "fugue";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    text-align: center;
+    text-decoration: none;
+
+    color: #ffffff;
   }
 </style>
