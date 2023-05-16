@@ -1,15 +1,12 @@
 ---
 import Menu from "./Menu.astro";
-import Timer from "./Timer.astro";
 ---
 
 <header>
   <div class="column1">
     <a href="/">
       <img class="logo" src="../assets/logo.webp" alt="logo" />
-    </div></a>
-  <div class="column2">
-    <Timer />
+    </a>
   </div>
   <div class="column3">
     <Menu />
@@ -35,32 +32,28 @@ import Timer from "./Timer.astro";
   img {
     max-width: 150px;
   }
-  .column2 {
-    max-width: 100%;
-    text-align: center;
-  }
+
   .column3 {
     max-width: 100%;
     align-items: right;
     padding-right: 1rem;
   }
 
-    @media screen and (max-width: 700px) {
+  @media screen and (max-width: 700px) {
     header {
-        display: block;
-        padding: 2rem;
-        height: 460px;
-        background: url("../assets/header_pic.png") no-repeat center center fixed;
-        background-size: cover;
-      }
-    
-        .column3 {
-          position: relative;
-          top: -25%;
-          left: 80%;
-        max-width: 100%;
-        align-items: right;
-      }
-    
-      }
+      display: block;
+      padding: 2rem;
+      height: 460px;
+      background: url("../assets/header_pic.png") no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .column3 {
+      position: relative;
+      top: -25%;
+      left: 80%;
+      max-width: 100%;
+      align-items: right;
+    }
+  }
 </style>
