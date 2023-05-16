@@ -1,17 +1,12 @@
-@font-face {
-  font-family: dance;
-  src: url("/font/Dance.ttf");
-}
-
-@font-face {
-  font-family: fugue;
-  src: url("/font/Fugue-Regular.ttf");
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+/* font-family: 'Montserrat', sans-serif; */
+/* regular 400
+Semi-bold 600 */
 
 p,
 span,
 h1,
 h2,
 li {
-  font-family: fugue;
+  font-family: "Montserrat", sans-serif;
 }
