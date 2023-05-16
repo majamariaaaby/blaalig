@@ -2,22 +2,31 @@
 ---
 
 <footer>
+  <a href="/about.astro">About</a>
+  <a href="/sustainability.astro">Sustainability</a>
+  <a href="/gallery.astro">Gallery</a>
   <div class="logo">    <a href="/">
-    <img src="../assets/kune_logo_lang.webp" alt="logo" />
+    <img src="/assets/logo_white.png" alt="logo" />
      </div></a>
-  <div class="copyright">
-    <p>&copy; 2023 KUNE. All Rights Reserved.</p>
-  </div>
+  
+    <p>Blaalig</p>
+    <p>Copenhagen, Denmark</p>
+    <p> <br> </p>
+    <p>blaaligjewellery@gmail.com</p>
+    <p>+45 51 89 84 83</p>
+  
 </footer>
 
 <style>
   footer {
-    background-color: rgb(0, 0, 0);
+    background: url("../assets/icebackground.png") no-repeat center center fixed;
+    background-size: cover;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    
+  
   }
 
   .logo {
@@ -25,7 +34,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 100px;
+    max-width: 60%;
+    padding-top: 2em;
   }
 
   .logo img {
@@ -61,5 +71,15 @@
 
   .footer-item {
     margin-bottom: 10px;
+  }
+  a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 0.5em;
+  }
+  p{
+    font-weight: 600;
+    margin: 0;
   }
 </style>
