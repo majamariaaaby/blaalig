@@ -2,40 +2,55 @@
 ---
 
 <footer>
-  <a href="/about.astro">About</a>
-  <a href="/sustainability.astro">Sustainability</a>
-  <a href="/gallery.astro">Gallery</a>
-  <div class="logo">    <a href="/">
-    <img src="/assets/logo_white.png" alt="logo" />
-     </div></a>
-  
-    <p>Blaalig</p>
-    <p>Copenhagen, Denmark</p>
-    <p> <br> </p>
-    <p>blaaligjewellery@gmail.com</p>
-    <p>+45 51 89 84 83</p>
-  
+  <div class="grid1x1x1">
+    <div class="links">
+      <p><a href="/about.astro">About</a></p>
+      <p><a href="/sustainability.astro">Sustainability</a></p>
+      <p><a href="/gallery.astro">Gallery</a></p>
+    </div>
+    <div>
+      <div class="logo">
+        <a href="/">
+          <img src="/assets/logo_white.png" alt="logo" />
+        </a>
+      </div>
+    </div>
+    <div class="info">
+      <p>Blaalig</p>
+      <p>Copenhagen, Denmark</p>
+      <p><br /></p>
+      <p>blaaligjewellery@gmail.com</p>
+      <p>+45 51 89 84 83</p>
+      <div class="infoImg">
+        <a href="https://www.instagram.com/blaalig/" target="_blank"
+          ><img src="/assets/instagram.png" alt="" /></a
+        >
+      </div>
+    </div>
+  </div>
 </footer>
 
 <style>
   footer {
-    background: url("../assets/icebackground.png") no-repeat center center fixed;
+    background: url("../assets/icebackground.png") no-repeat center 95%;
     background-size: cover;
     color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-  
+    background-size: 101%;
+  }
+
+  .links {
+    text-align: center;
+    padding-top: 2em;
+    display: block;
   }
 
   .logo {
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 60%;
-    padding-top: 2em;
+    width: 300px;
+    margin: auto;
+    padding-top: 20px;
   }
 
   .logo img {
@@ -43,43 +58,75 @@
     max-height: 100%;
   }
 
-  .logo img:hover {
-    opacity: 0.8;
-  }
-
-  .logo:hover {
-    cursor: pointer;
-  }
-
-  .footer-item {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  footer {
-    flex-direction: column;
-    height: auto;
-    padding: 20px 0;
-    width: 100%;
-  }
-
-  .logo {
-    margin-bottom: 20px;
-  }
-
-  .footer-item {
-    margin-bottom: 10px;
-  }
-  a{
+  a {
     text-decoration: none;
     color: #fff;
     font-weight: 600;
-    padding: 0.5em;
   }
-  p{
+
+  .links p {
+    padding-top: 20px;
+  }
+  p {
     font-weight: 600;
     margin: 0;
+    text-align: center;
+  }
+
+  .info {
+    padding-bottom: 3em;
+  }
+
+  .info p {
+    padding-top: 0.5em;
+  }
+
+  .infoImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.5em;
+  }
+
+  .info img {
+    filter: invert(100%);
+    width: 40px;
+  }
+
+  @media (min-width: 800px) {
+    .grid1x1x1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .info {
+      grid-column: 1;
+      grid-row: 1;
+      padding-left: 65px;
+      padding-top: 40px;
+    }
+
+    .links {
+      grid-column: 3;
+      grid-row: 1;
+      padding-right: 65px;
+      padding-top: 25px;
+    }
+    .links p {
+      text-align: right;
+      margin-top: 30px;
+    }
+
+    .info p {
+      text-align: left;
+    }
+
+    .infoImg {
+      justify-content: left;
+    }
+
+    .logo {
+      padding-top: 105px;
+    }
   }
 </style>
