@@ -24,7 +24,6 @@ import Menu from "./Menu.astro";
 <script>
   window.addEventListener("scroll", function () {
     var header = document.getElementById("myHeader");
-    var color = document.getElementById("column1");
     var scrollPosition = window.scrollY || window.pageYOffset;
 
     if (scrollPosition > 0) {
@@ -62,7 +61,7 @@ import Menu from "./Menu.astro";
   }
 
   .sticky .burger {
-    filter: invert(100%);
+    color: black;
     transition: filter 0.7s ease;
   }
 
