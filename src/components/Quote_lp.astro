@@ -2,11 +2,22 @@
 ---
 
 <div class="grid_1">
-  <div class="quote"><p>All of our jewelry is created in sterling silver as we wish for them to be long-lasting and as sustainable as possible.</p></div>
+  <div class="quoteMobile">
+    <p>
+      All of our jewelry is created<br /> in sterling silver as we wish<br /> for
+      them to be long-lasting<br /> and as sustainable as<br /> possible.
+    </p>
+  </div>
+  <div class="quoteDesk">
+    <p>
+      All of our jewelry is created in sterling silver as<br /> we wish for them
+      to be long-lasting and as<br /> sustainable as possible.
+    </p>
+  </div>
 </div>
 
 <style>
-  .quote {
+  p {
     text-align: center;
     font-size: 25px;
     padding-top: 4em;
@@ -14,5 +25,20 @@
     padding-left: 0.1em;
     padding-right: 0.1em;
     line-height: 1.5em;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .quoteDesk {
+    display: none;
+  }
+
+  @media (min-width: 800px) {
+    .quoteMobile {
+      display: none;
+    }
+    .quoteDesk {
+      display: block;
+    }
   }
 </style>

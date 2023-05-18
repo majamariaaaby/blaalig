@@ -2,53 +2,122 @@
 import Menu from "./Menu.astro";
 ---
 
-<header>
-  <div class="header">
+<header id="myHeader">
+  <div>
     <div class="column1">
       <a href="/">
-        <img class="logo" src="../assets/logo.webp" alt="logo" />
+        <img class="logo" src="../assets/logo_white.png" alt="logo" />
       </a>
     </div>
     <div class="column3">
-      <Menu />
+      <div class="burger">
+        <Menu />
+      </div>
+      <div class="menu">
+        <a href="/about">About</a>
+        <a href="/sustainability">Sustainability</a>
+        <a href="/gallery">Gallery</a>
+      </div>
     </div>
   </div>
-  <section class="flex"></section>
 </header>
+<script>
+  window.addEventListener("scroll", function () {
+    var header = document.getElementById("myHeader");
+    var scrollPosition = window.scrollY || window.pageYOffset;
 
+    if (scrollPosition > 0) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  });
+</script>
 <style>
   header {
-    display: block;
+    position: fixed;
+    height: 80px;
+    background-color: transparent;
+    transition: background-color 0.7s ease;
   }
-  .header {
-    display: flex;
-    justify-content: space-between;
-    padding: 2rem;
-    height: 766px;
-    background: url("../assets/forside_foto.webp") no-repeat center center fixed;
-    background-size: cover;
+
+  .sticky {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    transition: background-color 0.7s ease;
+  }
+
+  .sticky a {
+    color: black;
+    transition: color 0.7s ease;
+  }
+
+  .sticky img {
+    filter: invert(100%);
+    transition: filter 0.3s ease;
+  }
+
+  .sticky .burger {
+    filter: invert(100%);
+    transition: filter 0.7s ease;
   }
 
   .column1 {
     max-width: 100%;
     text-align: left;
+    margin: 0;
+    position: fixed;
+    margin-top: 20px;
+    margin-left: 25px;
   }
   img {
-    max-width: 150px;
+    max-width: 170px;
+    transition: filter 0.3s ease;
   }
-  .column2 {
-    max-width: 100%;
-    text-align: center;
-  }
+
   .column3 {
     max-width: 100%;
     align-items: right;
+    position: fixed;
+    right: 6%;
+    margin-top: 25px;
   }
 
-  .flex {
-    width: 100%;
-    position: absolute;
-    top: 10%;
-    left: -10;
+  .burger {
+    transition: filter 0.3s ease;
+  }
+  .menu {
+    display: none;
+  }
+  /* DESKTOP */
+  @media (min-width: 800px) {
+    header {
+      height: 100px;
+    }
+
+    .burger {
+      display: none;
+    }
+    img {
+      max-width: 220px;
+    }
+
+    .menu {
+      display: flex;
+      padding-right: 0;
+      padding-top: 15px;
+    }
+
+    a {
+      color: white;
+      font-weight: 600;
+      font-size: 20px;
+      text-decoration: none;
+      padding-left: 36px;
+      transition: color 0.3s ease;
+    }
   }
 </style>

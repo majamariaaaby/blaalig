@@ -2,30 +2,56 @@
 ---
 
 <footer>
-  <div class="logo">    <a href="/">
-    <img src="../assets/kune_logo_lang.webp" alt="logo" />
-     </div></a>
-  <div class="copyright">
-    <p>&copy; 2023 KUNE. All Rights Reserved.</p>
+  <div class="grid1x1x1">
+    <div class="links">
+      <p><a href="/about.astro">About</a></p>
+      <p><a href="/sustainability.astro">Sustainability</a></p>
+      <p><a href="/gallery.astro">Gallery</a></p>
+    </div>
+    <div>
+      <div class="logo">
+        <a href="/">
+          <img src="/assets/logo_white.png" alt="logo" />
+        </a>
+      </div>
+    </div>
+    <div class="info">
+      <p>Blaalig</p>
+      <p>Copenhagen, Denmark</p>
+      <p><br /></p>
+      <p>blaaligjewellery@gmail.com</p>
+      <p>+45 51 89 84 83</p>
+      <div class="infoImg">
+        <a href="https://www.instagram.com/blaalig/" target="_blank"
+          ><img src="/assets/instagram.png" alt="" /></a
+        >
+      </div>
+    </div>
   </div>
 </footer>
 
 <style>
   footer {
-    background-color: rgb(0, 0, 0);
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
+    background: url("../assets/annie-spratt-4lMTajLp5FY-unsplash.jpg") no-repeat
+      center center;
+    background-size: cover;
+    color: white;
+    background-size: 101%;
+  }
+
+  .links {
+    text-align: center;
+    padding-top: 2em;
+    display: block;
   }
 
   .logo {
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 100px;
+    width: 300px;
+    margin: auto;
+    padding-top: 20px;
   }
 
   .logo img {
@@ -33,33 +59,75 @@
     max-height: 100%;
   }
 
-  .logo img:hover {
-    opacity: 0.8;
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
   }
 
-  .logo:hover {
-    cursor: pointer;
+  .links p {
+    padding-top: 20px;
+  }
+  p {
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
   }
 
-  .footer-item {
-    flex: 1;
+  .info {
+    padding-bottom: 3em;
+  }
+
+  .info p {
+    padding-top: 0.5em;
+  }
+
+  .infoImg {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 1.5em;
   }
 
-  footer {
-    flex-direction: column;
-    height: auto;
-    padding: 20px 0;
-    width: 100%;
+  .info img {
+    filter: invert(100%);
+    width: 40px;
   }
 
-  .logo {
-    margin-bottom: 20px;
-  }
+  @media (min-width: 800px) {
+    .grid1x1x1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
 
-  .footer-item {
-    margin-bottom: 10px;
+    .info {
+      grid-column: 1;
+      grid-row: 1;
+      padding-left: 65px;
+      padding-top: 40px;
+    }
+
+    .links {
+      grid-column: 3;
+      grid-row: 1;
+      padding-right: 65px;
+      padding-top: 25px;
+    }
+    .links p {
+      text-align: right;
+      margin-top: 30px;
+    }
+
+    .info p {
+      text-align: left;
+    }
+
+    .infoImg {
+      justify-content: left;
+    }
+
+    .logo {
+      padding-top: 105px;
+    }
   }
 </style>

@@ -1,0 +1,85 @@
+---
+import "../css/global.css";
+import Forsideheader from "../components/Forsideheader.astro";
+import Layout from "../layouts/Layout.astro";
+import Sixitems from "../components/sixitems.astro";
+import Quote_lp from "../components/Quote_lp.astro";
+---
+
+<Forsideheader />
+<div class="header">
+  <h1>Sustainability</h1>
+</div>
+<Layout title="Blaalig">
+  <Quote_lp />
+
+  <div class="grid1x1">
+    <div class="ring"></div>
+    <div class="gif"></div>
+  </div>
+  <Sixitems />
+  <div class="nila"></div>
+</Layout>
+
+<style>
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    height: 100vh;
+    background: url("../assets/annie-spratt-_F2T1OyB7K0-unsplash.jpg") no-repeat;
+    background-position: 80% bottom;
+    background-size: cover;
+  }
+
+  .ring {
+    height: 400px;
+    background: url("../assets/_66A9717.jpg") no-repeat;
+    background-size: cover;
+    background-position: center 25%;
+  }
+
+  .gif {
+    height: 400px;
+    background: url("../assets/gifSUS.gif") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  h1 {
+    color: white;
+    margin: auto;
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+  .nila {
+    height: 1000px;
+    background: url("../assets/2022_05_01_BLAALIG produkt7043.jpg") no-repeat
+      center;
+    background-size: cover;
+  }
+
+  img {
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  @media (min-width: 800px) {
+    .grid1x1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    h1 {
+      font-size: 100px;
+    }
+
+    .ring {
+      height: 750px;
+    }
+
+    .gif {
+      height: 750px;
+      background-position: center bottom;
+    }
+  }
+</style>
