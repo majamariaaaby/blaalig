@@ -14,8 +14,8 @@ import Quote_lp from "../components/Quote_lp.astro";
   <Quote_lp />
 
   <div class="grid1x1">
-    <img src="../assets/alban.jpg" alt="" />
-    <img src="../assets/alban.jpg" alt="" />
+    <div class="ring"></div>
+    <div class="gif"></div>
   </div>
   <Sixitems />
   <div class="nila"></div>
@@ -32,6 +32,19 @@ import Quote_lp from "../components/Quote_lp.astro";
     background-size: cover;
   }
 
+  .ring {
+    height: 400px;
+    background: url("../assets/_66A9717.jpg") no-repeat;
+    background-size: cover;
+    background-position: center 25%;
+  }
+
+  .gif {
+    height: 400px;
+    background: url("../assets/gifSUS.gif") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
   h1 {
     color: white;
     margin: auto;
@@ -58,6 +71,15 @@ import Quote_lp from "../components/Quote_lp.astro";
     }
     h1 {
       font-size: 100px;
+    }
+
+    .ring {
+      height: 750px;
+    }
+
+    .gif {
+      height: 750px;
+      background-position: center bottom;
     }
   }
 </style>
