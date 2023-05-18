@@ -1,0 +1,84 @@
+---
+---
+
+<div class="slider-container">
+  <div class="slider-row">
+    <div class="slider">
+      <img src="../assets/alban.jpg" alt="Image 1" />
+      <img src="../assets/alban.jpg" alt="Image 2" />
+      <img src="../assets/alban.jpg" alt="Image 3" />
+      <img src="../assets/alban.jpg" alt="Image 9" />
+      <img src="../assets/alban.jpg" alt="Image 9" />
+      <img src="../assets/alban.jpg" alt="Image 9" />
+      <!-- Add more images here -->
+    </div>
+  </div>
+  <div class="slider-row">
+    <div class="slider">
+      <img src="../assets/alban.jpg" alt="Image 4" />
+      <img src="../assets/alban.jpg" alt="Image 5" />
+      <img src="../assets/alban.jpg" alt="Image 6" />
+      <img src="../assets/alban.jpg" alt="Image 9" />
+      <img src="../assets/alban.jpg" alt="Image 9" />
+      <img src="../assets/alban.jpg" alt="Image 9" />
+      <img src="../assets/alban.jpg" alt="Image 9" />
+      <!-- Add more images here -->
+    </div>
+  </div>
+  <div class="slider-row">
+    <div class="slider">
+      <img src="../assets/alban.jpg" alt="Image 7" />
+      <img src="../assets/alban.jpg" alt="Image 8" />
+      <img src="../assets/alban.jpg" alt="Image 9" />
+      <img src="../assets/alban.jpg" alt="Image 9" />
+      <img src="../assets/alban.jpg" alt="Image 9" />
+      <img src="../assets/alban.jpg" alt="Image 9" />
+      <img src="../assets/alban.jpg" alt="Image 9" />
+      <!-- Add more images here -->
+    </div>
+  </div>
+</div>
+
+<style>
+  .slider-container {
+    position: relative;
+    width: 100%;
+    overflow-x: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .slider-row {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-bottom: 20px;
+
+    /* overflow-y: hidden; */
+  }
+
+  .slider {
+    display: inline-flex;
+  }
+
+  .slider img {
+    max-width: 100%;
+    max-height: 40vh;
+    object-fit: contain;
+  }
+
+  /* Hide the scrollbar */
+  .slider-row {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+  }
+
+  .slider-row::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, and Opera */
+  }
+</style>
