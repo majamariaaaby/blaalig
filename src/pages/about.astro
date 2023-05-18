@@ -1,0 +1,150 @@
+---
+import "../css/global.css";
+import Forsideheader from "../components/Forsideheader.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Forsideheader />
+<div class="header">
+  <h1>About</h1>
+</div>
+<Layout title="Blaalig">
+        <div class="container">
+        <div class="grid1x1">
+            <div class="text">
+                <p>Blaalig is a brand, focusing on jewelry that is long lasting, creates awareness and aimes to be as
+                    sustainable as possible. We have created a trendy jewelry collection that is inspired by one of FN's
+                    Global
+                    Goals, "Climate Action".
+                </p>
+                <p>
+                    One of the biggest areas where we need to take action is with the rising sea levels. We want to
+                    create
+                    awareness on this serious topic and our jewelry is therefor inspired by the beautiful gletchers and
+                    sea
+                    ice
+                    that sadly are melting away.</p>
+            </div>
+            <div class="image"> <img src="../assets/alban.jpg" alt=""></div>
+            </div>
+            <div class="quotemob">
+                <p>We are three young <br> women, who with passion <br>have designed and <br>created this company<br>
+                    and we
+                    truly
+                    hope
+                    that<br>
+                    you will take part in our <br>journey and enjoy our<br> jewelry.</p>
+            </div>
+                        <div class="quotedesk">
+                <p>We are three young women, who with passion have <br> designed and created this company
+                    and we
+                    truly
+                    hope <br>
+                    that
+                    you will take part in our journey and enjoy our<br> jewelry.</p>
+            </div>
+        </div>
+
+</Layout>
+
+<style>
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    height: 100vh;
+    background: url("../assets/annie-spratt-_F2T1OyB7K0-unsplash.jpg") no-repeat;
+    background-position: 80% bottom;
+    background-size: cover;
+  }
+
+    h1 {
+    color: white;
+    margin: auto;
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+  img {
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+
+    .image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .text {
+        padding: 3em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    
+    }
+
+    .text p {
+        line-height: 1.5;
+        max-width: 40ch;
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .quotemob {
+    text-align: center;
+    font-size: 25px;
+    padding-top: 4em;
+    padding-bottom: 3em;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+    line-height: 1.5em;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    }
+
+    .quotedesk{
+      display: none;
+    }
+
+
+  @media (min-width: 800px) {
+
+    .grid1x1{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .quotedesk{
+      display: block;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 4em;
+    padding-bottom: 3em;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+    line-height: 1.5em;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    }
+
+    .quotemob {
+     display: none;
+    }
+
+       .text {
+            order: 2;
+        }
+
+        .image {
+            order: 1;
+        }
+
+
+    h1 {
+      font-size: 100px;
+    }
+  }
+</style>
