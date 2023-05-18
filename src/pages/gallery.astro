@@ -1,0 +1,46 @@
+---
+import "../css/global.css";
+import Forsideheader from "../components/Forsideheader.astro";
+import Layout from "../layouts/Layout.astro";
+import Gallery_slider from "../components/Gallery_slider.astro";
+---
+
+<Forsideheader />
+<div class="header">
+  <h1>Gallery</h1>
+</div>
+<Layout title="Blaalig">
+    <Gallery_slider />
+</Layout>
+
+<style>
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    height: 100vh;
+    background: url("../assets/annie-spratt-_F2T1OyB7K0-unsplash.jpg") no-repeat;
+    background-position: 80% bottom;
+    background-size: cover;
+  }
+
+  h1 {
+    color: white;
+    margin: auto;
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+  img {
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+
+  @media (min-width: 800px) {
+
+    h1 {
+      font-size: 100px;
+    }
+  }
+</style>
