@@ -47,11 +47,13 @@
   </div>
 </div>
 
+
+
 <style>
   .slider-container {
     position: relative;
     width: 100%;
-    overflow-x: scroll;
+    overflow-x: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,12 +65,14 @@
     overflow-x: auto;
     white-space: nowrap;
     margin-bottom: 0;
+    touch-action: pan-x;
 
     /* overflow-y: hidden; */
   }
 
   .slider {
     display: inline-flex;
+    
   }
 
   .slider img {
@@ -79,18 +83,42 @@
 
   /* Hide the scrollbar */
   .slider-row {
-    scrollbar-width: none;
     /* Firefox */
+    overflow-x: none;
     -ms-overflow-style: none;
     /* IE and Edge */
   }
 
+
+  
   .slider-row::-webkit-scrollbar {
-    display: none;
     /* Chrome, Safari, and Opera */
+    display: none;
+  }
+
+  .slider-row::-webkit-scrollbar-thumb{
+    display: none;
+
   }
 
   h2 {
     padding-top: 20px;
   }
+
+  @media (min-width: 800px) {
+
+    .slider-row::-webkit-scrollbar {
+    /* Chrome, Safari, and Opera */
+    display: block;
+    height: 8px;
+    background-color: rgb(229, 229, 229);
+  }
+
+  .slider-row::-webkit-scrollbar-thumb{
+    display: block;
+    background-color: #486A71;
+
+  }
+}
+  
 </style>
