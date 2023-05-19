@@ -1,0 +1,28 @@
+---
+import "../css/global.css";
+import Forsideheader from "../components/Forsideheader.astro";
+import Layout from "../layouts/Layout.astro";
+import Product_header from "../components/Product_header.astro";
+import Product_img from "../components/Product_img.astro";
+import Product_info from "../components/Product_info.astro";
+import Product_purchase from "../components/Product_purchase.astro";
+---
+
+<Forsideheader />
+
+<Layout title="Blaalig">
+  <div class="grid1x1">
+    <Product_header />
+    <Product_img />
+    <Product_info />
+    <Product_purchase />
+  </div>
+</Layout>
+<style>
+  .grid1x1 {
+    padding: 0;
+    margin: 0;
+  }
+  @media (min-width: 800px) {
+  }
+</style>
