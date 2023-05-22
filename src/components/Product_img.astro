@@ -1,14 +1,23 @@
 ---
 
 ---
-
-<img src="../assets/gallery/gallery1.webp" alt="">
-<img src="../assets/gallery/gallery2.webp" alt="">
-<img src="../assets/gallery/gallery3.webp" alt="">
+<div class="position">
+    <img src="../assets/gallery/gallery1.webp" alt="">
+    <img src="../assets/gallery/gallery2.webp" alt="">
+    <img src="../assets/gallery/gallery3.webp" alt="">
+</div>
 
 <style>
 
 img{
     max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.position{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* This will make the images fill the container's width */
 }
 </style>

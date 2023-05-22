@@ -1,6 +1,6 @@
 ---
 import "../css/global.css";
-import Forsideheader from "../components/Forsideheader.astro";
+import Headerv2 from "../components/Headerv2.astro";
 import Layout from "../layouts/Layout.astro";
 import Product_header from "../components/Product_header.astro";
 import Product_img from "../components/Product_img.astro";
@@ -8,21 +8,65 @@ import Product_info from "../components/Product_info.astro";
 import Product_purchase from "../components/Product_purchase.astro";
 ---
 
-<Forsideheader />
+<Headerv2 />
 
 <Layout title="Blaalig">
-  <div class="grid1x1">
-    <Product_header />
-    <Product_img />
-    <Product_info />
-    <Product_purchase />
+  <div class="container">
+      <div class="product-header">
+        <Product_header />
+     </div>
+        <div class="overflow">
+          <div class="images">
+            <Product_img />
+          </div>
+        </div>
+      <div class="product-info">
+          <Product_info />
+          <Product_purchase />
+      </div>
   </div>
 </Layout>
 <style>
-  .grid1x1 {
-    padding: 0;
+  .container {
+    padding: 6em;
     margin: 0;
   }
   @media (min-width: 800px) {
+
+    .container{
+      padding: 6em 0 0 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 90vh;
+    }
+
+    .overflow{
+      display: flex;
+      position: absolute;
+      overflow-y: scroll; /* make it scrollable */
+      height: 90%; 
+      width: 100%;
+    }
+
+    .images {
+      grid-row: 1;
+      width: 50vw;
+    }
+
+    .product-header,
+    .product-info{
+    grid-column: 2/3;
+    grid-row: 1;
+    padding-left: 1em;
+    padding-right: 1em;
+    }
+
+    .product-info{
+    margin-top: 7em;
+    }
+
+
+
   }
 </style>
