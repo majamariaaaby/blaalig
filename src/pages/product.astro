@@ -12,61 +12,73 @@ import Product_purchase from "../components/Product_purchase.astro";
 
 <Layout title="Blaalig">
   <div class="container">
-      <div class="product-header">
-        <Product_header />
-     </div>
-        <div class="overflow">
-          <div class="images">
-            <Product_img />
-          </div>
-        </div>
-      <div class="product-info">
-          <Product_info />
-          <Product_purchase />
+    <div class="product-header">
+      <Product_header />
+    </div>
+    <div class="overflow">
+      <div class="images">
+        <Product_img />
       </div>
+    </div>
+    <div class="product-info">
+      <Product_info />
+    </div>
   </div>
-</Layout>
-<style>
-  .container {
-    padding: 6em;
-    margin: 0;
-  }
-  @media (min-width: 800px) {
+  <Product_purchase />
+  <style>
 
-    .container{
+    html{
+      height:100%
+      scroll-behavior: smooth;
+    }
+    .container {
       padding: 6em 0 0 0;
       margin: 0;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      height: 90vh;
     }
 
-    .overflow{
-      display: flex;
-      position: absolute;
-      overflow-y: scroll; /* make it scrollable */
-      height: 90%; 
-      width: 100%;
+    .product-info {
+      padding: 0 1.5em 0 1.5em;
     }
 
-    .images {
-      grid-row: 1;
-      width: 50vw;
+    @media (min-width: 800px) {
+      .container {
+        padding: 6em 0 0 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 100vh;
+      }
+
+      .overflow {
+        display: flex;
+        position: absolute;
+        overflow-y: scroll; /* make it scrollable */
+        height: 100%;
+        width: 100%;
+      }
+
+      .images {
+        grid-row: 1;
+        width: 50vw;
+      }
+
+      .product-header,
+      .product-info,
+      .product-purchase {
+        grid-column: 2/3;
+        grid-row: 1;
+        padding-left: 2em;
+        padding-right: 2em;
+      }
+
+      .product-info {
+        margin-top: 7em;
+      }
+
+      .overflow::-webkit-scrollbar {
+        /* Chrome, Safari, and Opera */
+        scroll-behavior: smooth;
+      }
     }
-
-    .product-header,
-    .product-info{
-    grid-column: 2/3;
-    grid-row: 1;
-    padding-left: 1em;
-    padding-right: 1em;
-    }
-
-    .product-info{
-    margin-top: 7em;
-    }
-
-
-
-  }
-</style>
+  </style>
+</Layout>

@@ -37,32 +37,9 @@ import Menu from "./Menu.astro";
   header {
     position: fixed;
     height: 80px;
-    background-color: transparent;
-    transition: background-color 0.7s ease;
-  }
-
-  .sticky {
-    background-color: #fff;
-    position: fixed;
-    top: 0;
+    background-color: #ffffff;
     width: 100%;
-    z-index: 100;
     transition: background-color 0.7s ease;
-  }
-
-  .sticky a {
-    color: black;
-    transition: color 0.7s ease;
-  }
-
-  .sticky img {
-    filter: invert(100%);
-    transition: filter 0.3s ease;
-  }
-
-  .sticky .burger {
-    filter: invert(100%);
-    transition: filter 0.7s ease;
   }
 
   .column1 {
@@ -75,7 +52,7 @@ import Menu from "./Menu.astro";
   }
   img {
     max-width: 170px;
-    transition: filter 0.3s ease;
+    filter: invert(1);
   }
 
   .column3 {
@@ -86,9 +63,6 @@ import Menu from "./Menu.astro";
     margin-top: 25px;
   }
 
-  .burger {
-    transition: filter 0.3s ease;
-  }
   .menu {
     display: none;
   }
@@ -96,6 +70,8 @@ import Menu from "./Menu.astro";
   @media (min-width: 800px) {
     header {
       height: 100px;
+      background-color: transparent;
+      transition: background-color 0.7s ease;
     }
 
     .burger {
@@ -103,6 +79,7 @@ import Menu from "./Menu.astro";
     }
     img {
       max-width: 220px;
+      filter: invert(0);
     }
 
     .menu {
@@ -118,6 +95,25 @@ import Menu from "./Menu.astro";
       text-decoration: none;
       padding-left: 36px;
       transition: color 0.3s ease;
+    }
+
+    .sticky {
+      background-color: #fff;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      transition: background-color 0.7s ease;
+    }
+
+    .sticky a {
+      color: black;
+      transition: color 0.7s ease;
+    }
+
+    .sticky img {
+      filter: invert(100%);
+      transition: filter 0.3s ease;
     }
   }
 </style>

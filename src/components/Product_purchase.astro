@@ -2,9 +2,17 @@
 ---
 
 <div class="sticky">
-  <p>Purchase your jewelry by contacting us via<br /> <a href="mailto: blaaligjewellery@gmail.com"
-      >blaaligjewellery@gmail.com</a
-    > <br /> <a href="tel: +4551898483"> +45 51 89 84 83.</a>
+  <p class="mobil">
+    Purchase your jewelry by contacting us via<br />
+    <a href="mailto: blaaligjewellery@gmail.com">blaaligjewellery@gmail.com</a>
+    <br />
+    <a href="tel: +4551898483"> +45 51 89 84 83.</a>
+  </p>
+  <p class="desktop">
+    Purchase your jewelry by contacting us via e-mail:
+    <a href="mailto: blaaligjewellery@gmail.com">blaaligjewellery@gmail.com</a>
+
+    or by phone: <a href="tel: +4551898483"> +45 51 89 84 83.</a>
   </p>
 </div>
 
@@ -22,25 +30,34 @@
     margin: 0;
   }
 
-.sticky {
-  padding-top: 0.1em;
-  padding-bottom: 0.5em;
-  position: sticky;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: white;
-  border-top: 0.5px solid black;
-   /*  box-shadow: 0px 2px 1px 0px rgba(0,0,0,0.75);} */
-
-}
-
-  @media (min-width: 800px) {
-.sticky {
-  border: 0;
-}
-
+  .sticky {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    /* border-top: 0.5px solid black; */
+    /*  box-shadow: 0px 2px 1px 0px rgba(0,0,0,0.75);} */
   }
 
+  .desktop {
+    display: none;
+  }
 
+  @media (min-width: 800px) {
+    .sticky {
+      border: 0;
+      padding: 1em 0 1em 0;
+    }
+
+    .mobil {
+      display: none;
+    }
+
+    .desktop {
+      display: block;
+    }
+  }
 </style>
