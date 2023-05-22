@@ -1,0 +1,112 @@
+---
+---
+
+<div class="slider-container">
+  <div class="slider-row">
+    <div class="slider">
+
+    <div class="info">
+    <h3>1. Decide</h3>
+    <p>Drawing and sketching</p>
+      <img src="../assets/aboutfoto2.jpg" alt="Image 4" />
+      </div>
+          <div class="info">
+    <h3>Decide</h3>
+    <p>In the first step we use</p>
+      <img src="../assets/aboutfoto.jpg" alt="Image 4" />
+      </div>
+          <div class="info">
+    <h3>Decide</h3>
+    <p>In the first step we use</p>
+      <img src="../assets/gallery/gallery1.webp" alt="Image 4" />
+      </div>
+        <div class="info">
+    <h3>Decide</h3>
+    <p>In the first step we use</p>
+      <img src="../assets/gallery/gallery1.webp" alt="Image 4" />
+      </div>
+      <!-- Add more images here -->
+    </div>
+  </div>
+</div>
+
+<style>
+  .slider-container {
+    top: 5px;
+    position: relative;
+    width: 100%;
+    overflow-x: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .slider-row {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-bottom: 0;
+    touch-action: pan-x;
+
+    /* overflow-y: hidden; */
+  }
+
+  .slider {
+    display: inline-flex;
+  }
+
+h3,p{
+  padding-left: 2em;
+}
+
+  img {
+    width: 85vw;
+    object-fit: cover;
+    height: 40vh;
+  }
+
+
+  /* Hide the scrollbar */
+  .slider-row {
+    /* Firefox */
+    overflow-x: none;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+  }
+
+  .slider-row::-webkit-scrollbar {
+    /* Chrome, Safari, and Opera */
+    display: none;
+  }
+
+  .slider-row::-webkit-scrollbar-thumb {
+    display: none;
+  }
+
+  h2 {
+    padding-top: 20px;
+  }
+
+  @media (min-width: 800px) {
+    .slider-row::-webkit-scrollbar {
+      /* Chrome, Safari, and Opera */
+      display: block;
+      height: 8px;
+      background-color: rgb(229, 229, 229);
+    }
+
+    .slider-row::-webkit-scrollbar-thumb {
+      display: block;
+      /*background-color: #486A71;*/
+      background: url("../assets/icebackground.png") center 90%;
+    }
+
+    img{
+      max-height: 80vh;
+          object-fit: cover;
+          position: center;
+
+    }
+  }
+</style>
