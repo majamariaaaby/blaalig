@@ -37,6 +37,10 @@ const { data } = Astro.props;
     height: 300px;
   }
 
+  a {
+    text-decoration: none;
+    color: black;
+  }
   .imgDiv img:nth-child(2) {
     opacity: 0;
   }
@@ -54,14 +58,17 @@ const { data } = Astro.props;
     grid-row: 1;
   }
   .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
     text-align: center;
     position: relative;
-    top: 80%;
   }
 
   .price {
     font-size: 20px;
     margin: 0;
+    margin-bottom: 0.5em;
     font-weight: 400;
     font-family: "Montserrat", sans-serif;
   }
