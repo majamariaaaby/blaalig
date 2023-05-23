@@ -8,9 +8,10 @@ import Product_info from "../components/Product_info.astro";
 import Product_purchase from "../components/Product_purchase.astro";
 ---
 
-<Headerv2 />
+
 
 <Layout title="Blaalig">
+  <Headerv2 />
   <div class="container">
     <div class="product-header">
       <Product_header />
@@ -42,7 +43,7 @@ import Product_purchase from "../components/Product_purchase.astro";
 
     @media (min-width: 800px) {
       .container {
-        padding: 6em 0 0 0;
+        padding: 18vh 0 0 0;
         margin: 0;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -72,7 +73,7 @@ import Product_purchase from "../components/Product_purchase.astro";
       }
 
       .product-info {
-        margin-top: 7em;
+        margin-top: 15%;
       }
 
       .overflow::-webkit-scrollbar {
