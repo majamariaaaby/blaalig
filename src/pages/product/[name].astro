@@ -1,20 +1,42 @@
 ---
-import "../css/global.css";
-import Headerv2 from "../components/Headerv2.astro";
-import Layout from "../layouts/Layout.astro";
-import Product_header from "../components/Product_header.astro";
-import Product_img from "../components/Product_img.astro";
-import Product_info from "../components/Product_info.astro";
-import Product_purchase from "../components/Product_purchase.astro";
+import "../../css/global.css";
+import Headerv2 from "../../components/Headerv2.astro";
+import Layout from "../../layouts/Layout.astro";
+import Product_header from "../../components/Product_header.astro";
+import Product_img from "../../components/Product_img.astro";
+import Product_info from "../../components/Product_info.astro";
+import Product_purchase from "../../components/Product_purchase.astro";
+
+export async function getStaticPaths() {
+  const data = await fetch("https://hyirzxgnbyzseptrsnej.supabase.co/rest/v1/products", {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh5aXJ6eGduYnl6c2VwdHJzbmVqIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQyMzg0NjksImV4cCI6MTk5OTgxNDQ2OX0.snnOfGlxhhbRYpO6eCrZeUAF5CUfhVeReRhwSnTOinY",
+    },
+  }).then((response) => response.json());
+
+  return data.map((product) => {
+    return {
+      params: { name: product.name },
+      props: { myData: product },
+    };
+  });
+}
+
+const { myData } = Astro.props;
+console.log(myData);
 ---
 
 
 
-<Layout title="Blaalig">
+<Layout title={myData.name} >
   <Headerv2 />
   <div class="container">
     <div class="product-header">
-      <Product_header />
+
+     <Product_header>
+      
     </div>
     <div class="overflow">
       <div class="images">

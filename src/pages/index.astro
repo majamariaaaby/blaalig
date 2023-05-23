@@ -6,13 +6,20 @@ import Indexproducts from "../components/Indexproducts.astro";
 import Quote_lp from "../components/Quote_lp.astro";
 import About_lp from "../components/About_lp.astro";
 import Gallery_lp from "../components/Gallery_lp.astro";
+
+const data = await fetch("https://hyirzxgnbyzseptrsnej.supabase.co/rest/v1/products", {
+  method: "GET",
+  headers: {
+    apikey:
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh5aXJ6eGduYnl6c2VwdHJzbmVqIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQyMzg0NjksImV4cCI6MTk5OTgxNDQ2OX0.snnOfGlxhhbRYpO6eCrZeUAF5CUfhVeReRhwSnTOinY",
+  },
+}).then((res) => res.json());
 ---
 
 <Forsideheader />
 <div class="header"></div>
-<!-- <a href="#"><span>GET TICKETS</span></a> -->
 <Layout title="Blaalig">
-  <Indexproducts />
+  <Indexproducts data={data} />
   <Quote_lp />
   <div class="grid1x1">
     <About_lp />

@@ -1,45 +1,46 @@
 ---
-
+const myData = Astro.props;
 ---
 
 <div class="padding-top">
-    <h1>BELA RING</h1>
-    <h2>475 dkk</h2>
-    <div></div>
+  <h1>{myData.name}</h1>
+  <h2>{myData.price} DKK</h2>
+  <div></div>
 </div>
 
 <style>
-    h1,h2{
-        text-align: center;
-        margin: 0;
+  h1,
+  h2 {
+    text-align: center;
+    margin: 0;
+  }
+
+  h1 {
+    font-weight: 600;
+    font-size: 35px;
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 25px;
+    margin-bottom: 0.5em;
+  }
+
+  @media (min-width: 800px) {
+    h1,
+    h2 {
+      text-align: left;
+      margin-bottom: 0.5em;
     }
 
-    h1{
-        font-weight: 600;
-        font-size: 35px;
+    h1 {
+      font-weight: 600;
+      font-size: 40px;
     }
 
-    h2{
-        font-weight: 400;
-        font-size: 25px;
-        margin-bottom: 0.5em;
+    h2 {
+      font-weight: 400;
+      font-size: 30px;
     }
-
-
-    @media (min-width:800px){
-        h1,h2{
-        text-align: left;
-        margin-bottom: 0.5em;
-    }
-
-    h1{
-        font-weight: 600;
-        font-size: 40px;
-    }
-
-    h2{
-        font-weight: 400;
-        font-size: 30px;
-    }
-    }
+  }
 </style>
