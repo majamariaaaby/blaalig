@@ -53,9 +53,31 @@ console.log(myData);
       </div>
     </div>
     <div class="product-info">
-    <Product_info />
+
+    <div class="center">
+  <!-- DATABASE -->
+  <p>
+    Like all Blaaligs jewelry, our Bela ring is handmade and designed in Copenhagen. It expresses melting ice, which is
+    our underlying inspiration. Our Bela ring is made in 925 sterling silver to ensure good quality and long durability.
+  </p>
+
+  <p>MATERIAL - 925 sterling silver</p>
+  <!-- DATABASE -->
+  <p>SIZES: {myData.sizes} </p>
+
+  <ul>
+    <li>Handmade in Copenhagen, Denmark</li>
+    <br />
+    <li>Shipping within 10 working days</li>
+    <br />
+    <li>14 days return request</li>
+    <br />
+    <li>925 sterling silver</li>
+  </ul>
+</div>
     </div>
   </div>
+
   <Product_purchase/>
   <style>
 /* Header-title  */
@@ -82,6 +104,35 @@ console.log(myData);
     margin: 0;
     padding: 0;
 }
+
+/* Product Info  */
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+  }
+
+  .center ul {
+    list-style-type: disc;
+  }
+
+  .center p {
+    text-align: left;
+    font-size: 20px;
+    padding: 4em auto 3em auto;
+    line-height: 1.5em;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .center li {
+    text-align: left;
+    font-size: 20px;
+    line-height: 1.5em;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+  }
 
 .position{
     display: flex;
