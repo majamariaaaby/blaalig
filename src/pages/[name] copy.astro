@@ -35,61 +35,21 @@ console.log(myData);
   <div class="container">
     <div class="product-header">
 
-     <div class="padding-top">
-  <h1>{myData.name}</h1>
-  <h2>{myData.price} DKK</h2>
-</div>
+     <Product_header>
       
     </div>
     <div class="overflow">
       <div class="images">
-          <div class="position">
-            <img src={"/assets/products/" + myData.img} />
-            <img src={"/assets/products/" + myData.img2} />
-            <img src={"/assets/products/" + myData.img3} />
-            <img src={"/assets/products/" + myData.img4} />
-            <img src={"/assets/products/" + myData.img5} />
-          </div>
+        <Product_img />
       </div>
     </div>
     <div class="product-info">
-    <Product_info />
+      <Product_info />
     </div>
   </div>
-  <Product_purchase/>
+  <Product_purchase />
   <style>
-/* Header-title  */
-  .padding-top h1,
-  .padding-top h2 {
-    text-align: center;
-    margin: 0;
-  }
 
-  .padding-top h1 {
-    font-weight: 600;
-    font-size: 35px;
-  }
-
-  .padding-top h2 {
-    font-weight: 400;
-    font-size: 25px;
-    margin-bottom: 0.5em;
-  }
-
-/* images  */
-  .position img{
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.position{
-    display: flex;
-    flex-direction: column;
-    align-items: stretch; /* This will make the images fill the container's width */
-}
-
-/* Layout  */
     html{
       height:100%
       scroll-behavior: smooth;
@@ -104,26 +64,6 @@ console.log(myData);
     }
 
     @media (min-width: 800px) {
-/* header-title  */
-    .padding-top h1,
-    .padding-top h2 {
-      text-align: left;
-      margin-bottom: 0.5em;
-    }
-
-    .padding-top h1 {
-      font-weight: 600;
-      font-size: 40px;
-    }
-
-    .padding-top h2 {
-      font-weight: 400;
-      font-size: 30px;
-    }
-
-
-
-/* Layout  */
       .container {
         padding: 18vh 0 0 0;
         margin: 0;
