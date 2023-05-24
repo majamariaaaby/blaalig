@@ -4,26 +4,25 @@
 <div class="slider-container">
   <div class="slider-row">
     <div class="slider">
-
-    <div class="info">
-    <h3>1. Decide</h3>
-    <p>Drawing and sketching</p>
-      <img src="../assets/aboutfoto2.jpg" alt="Image 4" />
+      <div class="info">
+        <h3>1. Decide</h3>
+        <p>Drawing and sketching</p>
+        <img src="../assets/aboutfoto2.jpg" alt="Image 4" />
       </div>
-          <div class="info">
-    <h3>Decide</h3>
-    <p>In the first step we use</p>
-      <img src="../assets/aboutfoto.jpg" alt="Image 4" />
+      <div class="info">
+        <h3>Decide</h3>
+        <p>In the first step we use</p>
+        <img src="../assets/aboutfoto.jpg" alt="Image 4" />
       </div>
-          <div class="info">
-    <h3>Decide</h3>
-    <p>In the first step we use</p>
-      <img src="../assets/gallery/gallery1.webp" alt="Image 4" />
+      <div class="info">
+        <h3>Decide</h3>
+        <p>In the first step we use</p>
+        <img src="../assets/gallery/gallery1.webp" alt="Image 4" />
       </div>
-        <div class="info">
-    <h3>Decide</h3>
-    <p>In the first step we use</p>
-      <img src="../assets/gallery/gallery1.webp" alt="Image 4" />
+      <div class="info">
+        <h3>Decide</h3>
+        <p>In the first step we use</p>
+        <img src="../assets/gallery/gallery1.webp" alt="Image 4" />
       </div>
       <!-- Add more images here -->
     </div>
@@ -48,6 +47,7 @@
     white-space: nowrap;
     margin-bottom: 0;
     touch-action: pan-x;
+    font-size: 0;
 
     /* overflow-y: hidden; */
   }
@@ -56,16 +56,16 @@
     display: inline-flex;
   }
 
-h3,p{
-  padding-left: 2em;
-}
+  h3,
+  p {
+    padding-left: 2em;
+  }
 
   img {
     width: 85vw;
     object-fit: cover;
     height: 40vh;
   }
-
 
   /* Hide the scrollbar */
   .slider-row {
@@ -93,19 +93,18 @@ h3,p{
       /* Chrome, Safari, and Opera */
       display: block;
       height: 8px;
-      background-color: rgb(229, 229, 229);
+      background-color: rgb(209, 209, 209);
     }
 
     .slider-row::-webkit-scrollbar-thumb {
       display: block;
-      /*background-color: #486A71;*/
-      background: url("../assets/icebackground.png") center 90%;
+      background-color: #486a71;
+      /*background: url("../assets/icebackground.png") center 90%;*/
     }
 
-    img{
-          height: 80vh;
-          object-fit: cover;
-
+    img {
+      height: 80vh;
+      object-fit: cover;
     }
   }
 </style>

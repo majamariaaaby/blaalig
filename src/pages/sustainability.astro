@@ -26,7 +26,7 @@ import Quote_lp from "../components/Quote_lp.astro";
 
   arrowButton.addEventListener("click", () => {
     window.scrollTo({
-      top: 860,
+      top: window.innerHeight,
       behavior: "smooth",
     });
   });
@@ -83,7 +83,8 @@ import Quote_lp from "../components/Quote_lp.astro";
 
   .nila {
     height: 1000px;
-    background: url("../assets/2022_05_01_BLAALIG produkt7043.jpg") no-repeat center;
+    background: url("../assets/2022_05_01_BLAALIG produkt7043.jpg") no-repeat
+      center;
     background-size: cover;
   }
 
