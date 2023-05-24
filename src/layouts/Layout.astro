@@ -3,6 +3,8 @@ export interface Props {
   title: string;
 }
 import Footer from "../components/Footer.astro";
+import Forsideheader from "../components/Forsideheader.astro";
+import Header from "../components/Header.astro";
 import Menu from "../components/Menu.astro";
 const { title } = Astro.props;
 ---
@@ -24,6 +26,8 @@ const { title } = Astro.props;
 
 <style>
   body {
-    margin: 0;
+    max-width: 1800px;
+    margin: 0 auto !important;
+    float: none !important;
   }
 </style>

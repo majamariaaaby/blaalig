@@ -10,21 +10,33 @@ import Gallery_lp from "../components/Gallery_lp.astro";
 const data = await fetch("https://hyirzxgnbyzseptrsnej.supabase.co/rest/v1/products", {
   method: "GET",
   headers: {
-    apikey:
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh5aXJ6eGduYnl6c2VwdHJzbmVqIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQyMzg0NjksImV4cCI6MTk5OTgxNDQ2OX0.snnOfGlxhhbRYpO6eCrZeUAF5CUfhVeReRhwSnTOinY",
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh5aXJ6eGduYnl6c2VwdHJzbmVqIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQyMzg0NjksImV4cCI6MTk5OTgxNDQ2OX0.snnOfGlxhhbRYpO6eCrZeUAF5CUfhVeReRhwSnTOinY",
   },
 }).then((res) => res.json());
 ---
 
-<Forsideheader />
-<div class="header"></div>
 <Layout title="Blaalig">
+  <Forsideheader />
+  <div class="header">
+    <div class="arrow-button"><img src="/assets/Arrow.webp" alt="" /><p class="lil_p">See full collection</p></div>
+  </div>
+
   <Indexproducts data={data} />
   <Quote_lp />
   <div class="grid1x1">
     <About_lp />
     <Gallery_lp />
   </div>
+  <script>
+    const arrowButton = document.querySelector(".arrow-button");
+
+    arrowButton.addEventListener("click", () => {
+      window.scrollTo({
+        top: 860,
+        behavior: "smooth",
+      });
+    });
+  </script>
   <style>
     .header {
       display: flex;
@@ -36,6 +48,13 @@ const data = await fetch("https://hyirzxgnbyzseptrsnej.supabase.co/rest/v1/produ
       background-size: cover;
     }
 
+    .lil_p {
+      position: absolute;
+      top: -30px;
+      left: -200px;
+      text-transform: uppercase;
+      color: white;
+    }
     p {
       margin: auto;
       width: 551px;
@@ -50,6 +69,24 @@ const data = await fetch("https://hyirzxgnbyzseptrsnej.supabase.co/rest/v1/produ
       justify-content: center;
 
       color: #000000;
+    }
+    .arrow-button {
+      position: absolute;
+      top: 92%;
+      left: 50%;
+      width: 50px;
+      height: 50px;
+      margin-top: -25px; /* half of the height */
+      margin-left: -25px; /* half of the width */
+      border: none;
+      outline: none;
+      /* background-color: white; */
+      cursor: pointer;
+
+      scale: 0.5;
+    }
+    .arrow-button img {
+      max-width: 150px;
     }
 
     @media (min-width: 800px) {

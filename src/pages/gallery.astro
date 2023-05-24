@@ -8,29 +8,55 @@ import Gallery_slider from "../components/Gallery_slider.astro";
 <Forsideheader />
 <div class="header">
   <h1>Gallery</h1>
+  <div class="arrow-button"><img src="/assets/Arrow.webp" alt="" /></div>
 </div>
 <Layout title="Blaalig">
-    <Gallery_slider />
+  <Gallery_slider />
 </Layout>
+<script>
+  const arrowButton = document.querySelector(".arrow-button");
 
-
-
+  arrowButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 860,
+      behavior: "smooth",
+    });
+  });
+</script>
 <style>
   .header {
     display: flex;
     justify-content: space-between;
     padding: 2rem;
     height: 100vh;
-    background: url("../assets/annie-spratt-_F2T1OyB7K0-unsplash.jpg") no-repeat;
+    background: url("../assets/gallery_cover.jpg") no-repeat;
     background-position: 80% bottom;
     background-size: cover;
   }
+  .arrow-button {
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px; /* half of the height */
+    margin-left: -25px; /* half of the width */
+    border: none;
+    outline: none;
+    /* background-color: white; */
+    cursor: pointer;
 
+    scale: 0.5;
+  }
+  .arrow-button img {
+    max-width: 150px;
+  }
   h1 {
     color: white;
     margin: auto;
     font-size: 40px;
     font-weight: 600;
+    text-transform: uppercase;
   }
 
   img {
@@ -38,9 +64,7 @@ import Gallery_slider from "../components/Gallery_slider.astro";
     object-fit: contain;
   }
 
-
   @media (min-width: 800px) {
-
     h1 {
       font-size: 100px;
     }

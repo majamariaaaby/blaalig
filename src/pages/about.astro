@@ -8,45 +8,45 @@ import About_slider2 from "../components/About_slider2.astro";
 <Forsideheader />
 <div class="header">
   <h1>About</h1>
+  <div class="arrow-button"><img src="/assets/Arrow.webp" alt="" /></div>
 </div>
 <Layout title="Blaalig">
   <div class="container">
     <div class="grid1x1">
       <div class="text">
+        <p>Blaalig is a brand, focusing on jewelry that is long lasting, creates awareness and aimes to be as sustainable as possible. We have created a trendy jewelry collection that is inspired by one of FN's Global Goals, "Climate Action".</p>
         <p>
-          Blaalig is a brand, focusing on jewelry that is long lasting, creates
-          awareness and aimes to be as sustainable as possible. We have created
-          a trendy jewelry collection that is inspired by one of FN's Global
-          Goals, "Climate Action".
-        </p>
-        <p>
-          One of the biggest areas where we need to take action is with the
-          rising sea levels. We want to create awareness on this serious topic
-          and our jewelry is therefor inspired by the beautiful gletchers and
-          sea ice that sadly are melting away.
+          One of the biggest areas where we need to take action is with the rising sea levels. We want to create awareness on this serious topic and our jewelry is therefor inspired by the beautiful gletchers and sea ice that sadly are melting away.
         </p>
       </div>
       <div class="image"></div>
     </div>
     <div class="quotemob">
       <p>
-        We are three young <br /> women, who with passion <br />have designed
-        and <br />created this company<br />
+        We are three young <br /> women, who with passion <br />have designed and <br />created this company<br />
         and we truly hope that<br />
         you will take part in our <br />journey and enjoy our<br /> jewelry.
       </p>
     </div>
     <div class="quotedesk">
       <p>
-        We are three young women, who with passion have <br /> designed and created
-        this company and we truly hope <br />
+        We are three young women, who with passion have <br /> designed and created this company and we truly hope <br />
         that you will take part in our journey and enjoy our<br /> jewelry.
       </p>
     </div>
   </div>
   <About_slider2 />
 </Layout>
+<script>
+  const arrowButton = document.querySelector(".arrow-button");
 
+  arrowButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 860,
+      behavior: "smooth",
+    });
+  });
+</script>
 <style>
   .header {
     display: flex;
@@ -57,12 +57,31 @@ import About_slider2 from "../components/About_slider2.astro";
     background-position: 80% bottom;
     background-size: cover;
   }
+  .arrow-button {
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px; /* half of the height */
+    margin-left: -25px; /* half of the width */
+    border: none;
+    outline: none;
+    /* background-color: white; */
+    cursor: pointer;
+
+    scale: 0.5;
+  }
+  .arrow-button img {
+    max-width: 150px;
+  }
 
   h1 {
     color: white;
     margin: auto;
     font-size: 40px;
     font-weight: 600;
+    text-transform: uppercase;
   }
 
   img {
