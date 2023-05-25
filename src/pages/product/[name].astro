@@ -2,9 +2,9 @@
 import "../../css/global.css";
 import Headerv2 from "../../components/Headerv2.astro";
 import Layout from "../../layouts/Layout.astro";
-import Product_header from "../../components/Product_header.astro";
+/* import Product_header from "../../components/Product_header.astro";
 import Product_img from "../../components/Product_img.astro";
-import Product_info from "../../components/Product_info.astro";
+import Product_info from "../../components/Product_info.astro"; */
 import Product_purchase from "../../components/Product_purchase.astro";
 
 export async function getStaticPaths() {
@@ -56,12 +56,10 @@ console.log(myData);
 
     <div class="center">
   <!-- DATABASE -->
-  <p>
-    Like all Blaaligs jewelry, our Bela ring is handmade and designed in Copenhagen. It expresses melting ice, which is
-    our underlying inspiration. Our Bela ring is made in 925 sterling silver to ensure good quality and long durability.
+  <p>{myData.desc}
   </p>
 
-  <p>MATERIAL - 925 sterling silver</p>
+  <p>MATERIAL - {myData.material}</p>
   <!-- DATABASE -->
   <p>SIZES: {myData.sizes} </p>
 
