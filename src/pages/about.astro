@@ -15,37 +15,40 @@ import About_slider2 from "../components/About_slider2.astro";
     <div class="grid1x1">
       <div class="text">
         <p>
-          Blaalig is a brand, focusing on jewelry that is long lasting, creates
-          awareness and aimes to be as sustainable as possible. We have created
-          a trendy jewelry collection that is inspired by one of FN's Global
-          Goals, "Climate Action".
+          Blaalig is a brand, focusing on jewelry that is long lasting, creates awareness and aimes to be as sustainable
+          as possible. We have created a trendy jewelry collection that is inspired by one of FN's Global Goals,
+          "Climate Action".
         </p>
         <p>
-          One of the biggest areas where we need to take action is with the
-          rising sea levels. We want to create awareness on this serious topic
-          and our jewelry is therefor inspired by the beautiful gletchers and
-          sea ice that sadly are melting away.
+          One of the biggest areas where we need to take action is with the rising sea levels. We want to create
+          awareness on this serious topic and our jewelry is therefor inspired by the beautiful gletchers and sea ice
+          that sadly are melting away.
         </p>
       </div>
       <div class="image"></div>
     </div>
     <div class="quotemob">
       <p>
-        We are three young <br /> women, who with passion <br />have designed
-        and <br />created this company<br />
+        We are three young <br /> women, who with passion <br />have designed and <br />created this company<br />
         and we truly hope that<br />
         you will take part in our <br />journey and enjoy our<br /> jewelry.
       </p>
     </div>
     <div class="quotedesk">
       <p>
-        We are three young women, who with passion have <br /> designed and created
-        this company and we truly hope <br />
+        We are three young women, who with passion have <br /> designed and created this company and we truly hope <br
+        />
         that you will take part in our journey and enjoy our<br /> jewelry.
       </p>
     </div>
   </div>
-  <About_slider2 />
+  <div class="mp4">
+    <video loop autoplay muted>
+      <source src="../assets/Produktionsvideo.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <!--  <About_slider2 /> -->
 </Layout>
 <script>
   const arrowButton = document.querySelector(".arrow-button");
@@ -58,6 +61,22 @@ import About_slider2 from "../components/About_slider2.astro";
   });
 </script>
 <style>
+  .mp4 {
+    margin: 0;
+    padding: 0;
+    height: 500px;
+    overflow: hidden;
+    font-size: 0;
+  }
+
+  .mp4 video {
+    object-fit: cover;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
   .header {
     display: flex;
     justify-content: space-between;
