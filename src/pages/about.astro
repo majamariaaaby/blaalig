@@ -4,12 +4,12 @@ import Forsideheader from "../components/Forsideheader.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Forsideheader />
-<div class="header">
-  <h1>About</h1>
-  <div class="arrow-button"><img src="/assets/Arrow.webp" alt="" /></div>
-</div>
 <Layout title="Blaalig">
+  <Forsideheader />
+  <div class="header">
+    <h1>About</h1>
+    <div class="arrow-button"><img src="/assets/Arrow.webp" alt="" /></div>
+  </div>
   <div class="container">
     <div class="grid1x1">
       <div class="text">
@@ -41,13 +41,21 @@ import Layout from "../layouts/Layout.astro";
       </p>
     </div>
   </div>
+  <h2>PRODUCTION</h2>
   <div class="mp4">
     <video loop autoplay muted>
       <source src="../assets/Produktionsvideo.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
-  <!--  <About_slider2 /> -->
+  <div class="video-text">
+    <p>
+      Behind every Blaalig jewelry, there is a unique design process. As all pieces are handmade by us, minor
+      differences may occur in the jewelry.<br /><br /> We focus on the environment, intending to be as sustainable as possible.
+      Therefore, we have both our design process and our production in Copenhagen.<br /><br /> This is important to us as
+      it ensures high quality, keeps our production local, and reduces transport and CO2 emissions.
+    </p>
+  </div>
 </Layout>
 <script>
   const arrowButton = document.querySelector(".arrow-button");
@@ -60,6 +68,13 @@ import Layout from "../layouts/Layout.astro";
   });
 </script>
 <style>
+  h2 {
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 0.5em;
+    font-weight: 600;
+  }
   .mp4 {
     margin: 0;
     padding: 0;
@@ -70,11 +85,26 @@ import Layout from "../layouts/Layout.astro";
 
   .mp4 video {
     object-fit: cover;
+    object-position: center 40%;
     max-width: 100%;
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
+  }
+
+  .video-text {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .video-text p {
+    line-height: 1.5;
+    font-size: 20px;
+    text-align: left;
+    width: 90%;
   }
 
   .header {
