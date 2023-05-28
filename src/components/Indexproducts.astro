@@ -8,8 +8,14 @@ const { data } = Astro.props;
       return (
         <a href={`product/${product.name}`}>
           <div class="imgDiv">
-            <img src={"/assets/products/" + product.img} />
-            <img src={"/assets/products/" + product.img_hover} />
+            <img
+              src={"/assets/products/" + product.img}
+              alt="image of the product"
+            />
+            <img
+              src={"/assets/products/" + product.img_hover}
+              alt="the product on a person"
+            />
             <div class="info">
               <p class="name">{product.name}</p>
               <p class="price">{product.price} DKK</p>
